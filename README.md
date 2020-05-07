@@ -23,7 +23,4 @@ ROCK(r), PAPER(p), SCISSOR(s) : r
 r  vs  p
 Huh! you loss
 
-Choose
-ROCK(r), PAPER(p), SCISSOR(s) :
-
 ```
