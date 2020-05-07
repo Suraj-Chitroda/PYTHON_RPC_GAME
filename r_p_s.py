@@ -1,37 +1,40 @@
 #!/bin/python3
 
 from random import randint
+import os
 
-user = input("Choose \n ROCK(r), PAPER(p), SCISSOR(s) : ")
-
+os.system('cls')
+print("\n\nWelcome to RPS Game using Python")
+print("\nType(q) to QUIT?\nAnd here you go\n")
 choice = ['r' ,'p' ,'s']
-if user not in choice:
-  print("Non of use")
-  exit()
 
-#initialize computer choice
-comput = randint(1,3)
-chosen = choice[comput]
-  
-print(user," vs ",chosen)
+while True:
+	user = input("\nChoose \nROCK(r), PAPER(p), SCISSOR(s) : ").lower()
 
-if chosen == user:
-  print("DRAW!!!")
-elif user == 'r' and chosen == 's':
-  print("You won")
-elif user == 'p' and chosen == 'r':
-  print("You won")
-elif user == 's' and chosen == 'p':
-  print("You won")
-elif user == 'r' and chosen == 'p':
-  print("Huh! you loss")
-elif user == 'p' and chosen == 's':
-  print("Huh! you loss")
-elif user == 's' and chosen == 'r':
-  print("Huh! you loss")  
+	if user == 'q':
+		exit()
+	elif user not in choice:
+	  print("Non of use")
+	 
+	else: 
+		#initialize computer choice
+		comput = randint(0,2)
+		chosen = choice[comput]
+		
+		print(user," vs ",chosen)
 
-
-
-
-
+		if chosen == user:
+		  print("DRAW!!!")
+		elif user == 'r' and chosen == 's':
+		  print("You won")
+		elif user == 'p' and chosen == 'r':
+		  print("You won")
+		elif user == 's' and chosen == 'p':
+		  print("You won")
+		elif user == 'r' and chosen == 'p':
+		  print("Huh! you loss")
+		elif user == 'p' and chosen == 's':
+		  print("Huh! you loss")
+		elif user == 's' and chosen == 'r':
+		  print("Huh! you loss")  
 
